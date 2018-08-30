@@ -1,54 +1,40 @@
 import * as React from 'react';
 
 import {render} from 'app';
-import {router} from 'router';
 import {reducer} from 'reducer';
 import {createStore} from 'redux';
 import {hydrate} from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter} from 'react-router-dom';
 import {clientRestoreData} from 'data/clientRestoreData';
-import {QuantumRouter} from 'components/QuantumRouter/QuantumRouter';
 
-function start(state) {
+/**
+ * START WITHOUT STORE
+ **/
+function start() {
     hydrate(
         render(),
-        /*
-        <BrowserRouter>
-            {render()}
-        </BrowserRouter>,
-        // */
-        /*
-        <Provider store={state}>
-            <BrowserRouter>
-                {render()}
-            </BrowserRouter>
-        </Provider>,
-        // */
-        /*
-        <QuantumRouter event={state}>
-            {render()}
-        </QuantumRouter>,
-        // */
         document.getElementById('root')
     );
 }
-
 start();
 
-//let store = createStore(
+
+/**
+* START WITH STORE
+**/
+//
+// function start(state) {
+//     hydrate(
+//         <Provider store={state}>
+//             {render()}
+//         </Provider>,
+//         document.getElementById('root')
+//     );
+// }
+//
+// let store = createStore(
 //    reducer,
 //    clientRestoreData()
-//);
-//start(store)
-
-//router.start()
-//    .then((event) => {
-//        start(event);
-//    })
-//    .catch(error => {
-//        console.error(error);
-//    });
-
-
-
+// );
+//
+// start(store);

@@ -10,7 +10,7 @@ export class DynamicCounterExample extends React.Component {
         };
     }
 
-    componentDidMount() {
+    componentDidMount() { // аналог connectedCallback
         this.interval = setInterval(
             () => this.setState(({counter}) => ({counter: counter + 1})),
             1000
