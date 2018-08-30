@@ -2,8 +2,8 @@
 
 # Install
 
-    yarn install
+    npm install
     
 # Run development
 
-    yarn start
+    npm start
