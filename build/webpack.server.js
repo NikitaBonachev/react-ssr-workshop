@@ -12,6 +12,8 @@ module.exports = {
         libraryTarget: 'commonjs2'
     },
 
+    target: 'node',
+
     module: {
         ...config.webpack.module,
 

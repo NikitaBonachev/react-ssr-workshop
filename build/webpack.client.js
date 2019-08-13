@@ -18,6 +18,8 @@ module.exports = {
         ])
     },
 
+    target: 'web',
+
     module: {
         ...config.webpack.module,
 

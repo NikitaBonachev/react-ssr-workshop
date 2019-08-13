@@ -82,7 +82,7 @@ let serverWatch = serverCompiler.watch({aggregateTimeout: 200}, (err, stats) => 
 });
 
 app.get('/favicon.ico', (req, res) => {
-    res.redirect('https://yandex.st/lego/_/pDu9OWAQKB0s2J9IojKpiS_Eho.ico');
+    res.redirect('https://livedemo.xsolla.com/lif-store/images/favicon.png');
 });
 
 /**
@@ -117,7 +117,6 @@ app.use((req, res, next) => {
         } else {
             try {
                 let module = {};
-
                 eval(data.toString());
 
                 let middleware = module.exports.default({
