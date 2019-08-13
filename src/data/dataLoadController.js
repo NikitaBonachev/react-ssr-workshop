@@ -2,7 +2,7 @@ export function dataLoadController() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve({
-                user: 'John Snow'
+                user: 'Xsolla'
             });
         }, 30);
     });
